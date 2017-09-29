@@ -12,11 +12,7 @@ namespace CCC_CarCostCalculatorWPF
 
     class CarConstructor
     {
-        //private const int MAX_CARS= 20;
-        //private static double costPerMile;
-        //private static string carID;
-        //private static string carType;
-        //private static int newCar;
+        // en struct som innehåller 4 värden i form av bil typ, bil id, kostnad/mile och bil nr.
         internal struct CarStruct
         {
             private string _carType;
@@ -24,6 +20,7 @@ namespace CCC_CarCostCalculatorWPF
             private double _costPerMile;
             private int _carNr;
 
+            //Struct constructor som tar emot 4 argument som sen tilldelar argument värdena till värdena i structen
             public CarStruct(string carType, string carID, double costPerMile, int carNr)
             {
 
@@ -32,40 +29,13 @@ namespace CCC_CarCostCalculatorWPF
                 this._costPerMile = costPerMile;
                 this._carNr = carNr;
             }
+            //tar emot en CarStruct som argument och matar ut de värden som structen innehåller till en string som den sedan returnerar
             public static string CarReturner(CarStruct Car)
-            {
-                return string.Format("Car Number: " +Car._carNr +" Car ID: "+Car._carID +" Cab Type: "+Car._carType+ " Cost Per Mile: {0:N2}", Car._costPerMile);
+            {//Stringen som returneras.
+                return string.Format("Car Number: " + Car._carNr + " Car ID: " + Car._carID + " Cab Type: " + Car._carType + " Cost Per Mile: {0:N2}", Car._costPerMile);
             }
         };
 
-
-
-
-    //public CarConstructor(string CarID, string CabType, double Result, int CarNr)
-    //{
-
-    //    newCar = NewCar;
-    //    carType = CarType;
-    //    carID = CarID;
-    ////    costPerMile = CostPerMile;
-    //CarArrayStruct[] carPosition;
-    //carPosition = new CarArrayStruct[20];
-
+    }
 }
-}
-    //public static string Array(string CarID, string CabType, double Result, int CarNr)
-    //{
-    //    CarArrayStruct[] carPosition = new CarArrayStruct[20];
-    //    //carPosition = new CarArrayStruct[20];
-    //    carPosition[CarNr].costPerMile = Result;
-    //    carPosition[CarNr].carID = CarID;
-    //    carPosition[CarNr].carType = CabType;
 
-
-    //return string.Format("Car nr: " + CarNr + " Car: " + carPosition[CarNr].carID + " Type: " + carPosition[CarNr].carType + " Cost/Mile: {0:N2}", carPosition[CarNr].costPerMile);
-
-
-    //}
-
-//}
-//}

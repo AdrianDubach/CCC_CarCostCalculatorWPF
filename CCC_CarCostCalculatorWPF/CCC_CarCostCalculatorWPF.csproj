@@ -55,7 +55,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CarLister.cs" />
-    <Compile Include="ClearFunction.cs" />
     <Compile Include="TryParseMethod.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

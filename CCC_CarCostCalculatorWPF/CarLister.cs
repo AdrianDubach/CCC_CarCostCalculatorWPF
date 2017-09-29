@@ -6,51 +6,14 @@ using System.Threading.Tasks;
 
 namespace CCC_CarCostCalculatorWPF
 {
-    public class CarLister
+    public class CarMilesCalculator
     {
-        //private int carNr;
-        //private int carChecker;
-        //private double milesVal;
-        //private double gasCostVal;
-        //private double serviceCostVal;
-        //private double taxCostVal;
-        //private double extraCostVal;
-        //private double result;
-        //private string carID;
-        //private string miles;
-        //private string gasCost;
-        //private string serviceCost;
-        //private string taxCost;
-        //private string extraCost;
-        //private string cabType;
-        //private string arrayResult;
-        //private string errorMessage;
-
-        //public CarLister()
-        //{
-        //    carNr = 0;
-        //    carChecker = 0;
-        //    milesVal = 0;
-        //    gasCostVal = 0;
-        //    serviceCostVal = 0;
-        //    taxCostVal = 0;
-        //    extraCostVal = 0;
-        //    result = 0;
-        //    carID = null;
-        //    miles = null;
-        //    gasCost = null;
-        //    serviceCost = null;
-        //    taxCost = null;
-        //    extraCost = null;
-        //    cabType = null;
-        //    arrayResult = null;
-        //    errorMessage = null;
-
-        //}
+        //En uträknings metod som använder sig av de argumenten som givits för att utvinna ett resultat som den sedan returnerar.
         public static double CombineResult(double miles, double gasCostVal, double serviceCostVal, double taxCostVal, double extraCostVal)
         {
+            //Här är ekvationen som plussar ihop alla värden förutom miles, som den använder för att dela de ihoplagda talen. Svaret blir variabeln result.
             double result = (gasCostVal + serviceCostVal + taxCostVal + extraCostVal)/miles;
-
+            //returnerar result.
             return result;
         }
     }
